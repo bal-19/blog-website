@@ -16,7 +16,7 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about', [
         'title' => 'About',
-        'header' => 'About Me',
+        'header' => 'About Us',
     ]);
 });
 
@@ -24,7 +24,7 @@ Route::get('/blog', function () {
     // $posts = Post::with(['author', 'category'])->latest()->get();
     return view('blog', [
         'title' => 'Blog',
-        'header' => 'My Blog',
+        'header' => 'Our Blog',
         'posts' => Post::latest()->get()
     ]);
 });
@@ -39,7 +39,7 @@ Route::get('/blog/{post:slug}', function (Post $post) {
 Route::get('/contact', function () {
     return view('contact', [
         'title' => 'Contact',
-        'header' => 'Contact Me',
+        'header' => 'Contact Us',
     ]);
 });
 

@@ -32,7 +32,7 @@
                                 <span class="absolute -inset-1.5"></span>
                                 <span class="sr-only">Open user menu</span>
                                 <img class="h-8 w-8 rounded-full"
-                                    src="https://avatars.githubusercontent.com/u/152265152?v=4"
+                                    src="https://i.pravatar.cc/500"
                                     alt="photo profile">
                             </button>
                         </div>
@@ -89,7 +89,7 @@
             <div class="flex items-center px-5">
                 <div class="flex-shrink-0">
                     <img class="h-10 w-10 rounded-full"
-                        src="https://avatars.githubusercontent.com/u/152265152?v=4"
+                        src="https://i.pravatar.cc/500"
                         alt="photo profile">
                 </div>
                 <div class="ml-3">

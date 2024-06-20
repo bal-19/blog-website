@@ -2,31 +2,23 @@
     <x-slot:title>{{ $post->title }}</x-slot:title>
     <x-slot:header>{{ $header }}</x-slot:header>
 
-    <div class="bg-white mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 rounded-md">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="-mb-6 mx-auto max-w-2xl lg:mx-0">
-                <div class="relative mt-2 flex items-center gap-x-4">
-                    <img src="https://avatars.githubusercontent.com/u/152265152?v=4" alt="" class="h-10 w-10 rounded-full bg-gray-50">
-                    <div class="text-sm leading-6">
-                        <p class="mt-2 text-md leading-8 text-gray-500">
-                            <a href="/authors/{{ $post->author->username }}" class="hover:underline">
-                                {{ $post->author->name }}
-                            </a> 
-                            | 
-                            <a href="/categories/{{ $post->category->slug }}" class="hover:underline">
-                                {{ $post->category->name }}
-                            </a> 
-                            | 
-                            <time>{{ $post->created_at->format('l, d F Y') }}</time>
-                        </p>
-                    </div>
-                </div>
-                <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ $post->title }}</h2>
-            </div>
-            <div class="mt-10 max-w-max border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16">
-                <p class="mt-2 mb-4 text-sm leading-6 text-gray-600"><?= nl2br($post->content) ?></p>
-                <a class="mt-4 inline-flex items-center gap-x-2 text-sm leading-6 text-blue-500 hover:underline" href="/blog">&larr; Back</a>
-            </div>
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+                <header class="mb-4 lg:mb-6 not-format">
+                    <address class="flex items-center mb-6 not-italic">
+                        <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                            <img class="mr-4 w-16 h-16 rounded-full" src="https://i.pravatar.cc/500" alt="{{ $post->author->username }}">
+                            <div>
+                                <a href="/authors/{{ $post->author->username }}" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{{ $post->author->username }}</a>
+                                <p class="text-base text-gray-500 dark:text-gray-400"><time pubdate datetime="{{ $post->created_at }}" title="{{ $post->created_at->format('l, d F Y') }}">{{ $post->created_at->format('l, d F Y') }}</time></p>
+                            </div>
+                        </div>
+                    </address>
+                    <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">{{ $post->title }}</h1>
+                </header>
+                <p class="lead"><?= nl2br($post->content) ?></p>
+            </article>
         </div>
-    </div>
+    </section>
 </x-layout>

@@ -16,31 +16,38 @@ class CategorySeeder extends Seeder
         Category::create([
             'name' => 'Framework',
             'slug' => 'framework',
+            'color' => 'blue',
         ]);
 
         Category::create([
             'name' => 'Web Programming',
             'slug' => 'web-programming',
+            'color' => 'emerald'
         ]);
         Category::create([
             'name' => 'Game',
             'slug' => 'game',
+            'color' => 'red'
         ]);
         Category::create([
             'name' => 'UI/UX',
             'slug' => 'ui-ux',
+            'color' => 'violet'
         ]);
         Category::create([
             'name' => 'Database',
             'slug' => 'database',
+            'color' => 'neutral'
         ]);
         Category::create([
             'name' => 'Machine Learning',
             'slug' => 'machine-learning',
+            'color' => 'indigo'
         ]);
         Category::create([
             'name' => 'Artificial Intelligence',
             'slug' => 'artificial-intelligence',
+            'color' => 'amber'
         ]);
 
     }
