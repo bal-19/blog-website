@@ -21,11 +21,10 @@ Route::get('/about', function () {
 });
 
 Route::get('/blog', function () {
-    // $posts = Post::with(['author', 'category'])->latest()->get();
     return view('blog', [
         'title' => 'Blog',
         'header' => 'Our Blog',
-        'posts' => Post::latest()->get()
+        'posts' => Post::filter()->latest()->get()
     ]);
 });
 
