@@ -10,7 +10,7 @@
                         <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
                             <img class="mr-4 w-16 h-16 rounded-full" src="https://i.pravatar.cc/500" alt="{{ $post->author->username }}">
                             <div>
-                                <a href="/authors/{{ $post->author->username }}" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{{ $post->author->username }}</a>
+                                <a href="/blog?author={{ $post->author->username }}" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{{ $post->author->username }}</a>
                                 <p class="text-base text-gray-500 dark:text-gray-400"><time pubdate datetime="{{ $post->created_at }}" title="{{ $post->created_at->format('l, d F Y') }}">{{ $post->created_at->format('l, d F Y') }}</time></p>
                             </div>
                         </div>
