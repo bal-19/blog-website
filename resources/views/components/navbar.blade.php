@@ -14,7 +14,7 @@
                         hover:text-white' }} perintah disamping untuk mengaktifkan fitur 'active' --}}
 
                         <x-navbar-link href="/" :active="request()->is('/')">Home</x-navbar-link>
-                        <x-navbar-link href="/blog" :active="request()->is('blog')">Blog</x-navbar-link>
+                        <x-navbar-link href="/posts" :active="request()->is('posts')">Blog</x-navbar-link>
                         <x-navbar-link href="/about" :active="request()->is('about')">About</x-navbar-link>
                         <x-navbar-link href="/contact" :active="request()->is('contact')">Contact</x-navbar-link>
 
@@ -31,9 +31,7 @@
                                 id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                 <span class="absolute -inset-1.5"></span>
                                 <span class="sr-only">Open user menu</span>
-                                <img class="h-8 w-8 rounded-full"
-                                    src="https://i.pravatar.cc/500"
-                                    alt="photo profile">
+                                <img class="h-8 w-8 rounded-full" src="https://i.pravatar.cc/500" alt="photo profile">
                             </button>
                         </div>
                         <div x-show="isOpen" x-transition:enter="transition ease-out duration-100 transform"
@@ -41,14 +39,18 @@
                             x-transition:leave="transition ease-in duration-75 transform"
                             x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                             class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                            role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                            role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
+                            tabindex="-1">
                             <!-- Active: "bg-gray-100", Not Active: "" -->
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-300 hover:bg-slate-100" role="menuitem" tabindex="-1"
-                                id="user-menu-item-0">Your Profile</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-300 hover:bg-slate-100" role="menuitem" tabindex="-1"
-                                id="user-menu-item-1">Settings</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-300 hover:bg-slate-100" role="menuitem" tabindex="-1"
-                                id="user-menu-item-2">Sign out</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-300 hover:bg-slate-100"
+                                role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-300 hover:bg-slate-100"
+                                role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-300 hover:bg-slate-100"
+                                role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -61,13 +63,13 @@
                     <span class="absolute -inset-0.5"></span>
                     <span class="sr-only">Open main menu</span>
                     <!-- Menu open: "hidden", Menu closed: "block" -->
-                    <svg :class="{'hidden': isOpen, 'block': !isOpen }" class="block h-6 w-6" fill="none"
+                    <svg :class="{ 'hidden': isOpen, 'block': !isOpen }" class="block h-6 w-6" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                     <!-- Menu open: "block", Menu closed: "hidden" -->
-                    <svg :class="{'block': isOpen, 'hidden': !isOpen }" class="hidden h-6 w-6" fill="none"
+                    <svg :class="{ 'block': isOpen, 'hidden': !isOpen }" class="hidden h-6 w-6" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -81,16 +83,14 @@
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <x-navbar-link-mobile href="/" :active="request()->is('home')">Home</x-navbar-link-mobile>
-            <x-navbar-link-mobile href="/blog" :active="request()->is('blog')">Blog</x-navbar-link-mobile>
+            <x-navbar-link-mobile href="/posts" :active="request()->is('posts')">Blog</x-navbar-link-mobile>
             <x-navbar-link-mobile href="/about" :active="request()->is('about')">About</x-navbar-link-mobile>
             <x-navbar-link-mobile href="/contact" :active="request()->is('contact')">Contact</x-navbar-link-mobile>
         </div>
         <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">
                 <div class="flex-shrink-0">
-                    <img class="h-10 w-10 rounded-full"
-                        src="https://i.pravatar.cc/500"
-                        alt="photo profile">
+                    <img class="h-10 w-10 rounded-full" src="https://i.pravatar.cc/500" alt="photo profile">
                 </div>
                 <div class="ml-3">
                     <div class="text-base font-medium leading-none text-white">Iqbal Haidee</div>
