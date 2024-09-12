@@ -14,5 +14,9 @@
         "postcss": "^8.4.38",
         "tailwindcss": "^3.4.4",
         "vite": "^5.0"
+    },
+    "dependencies": {
+        "@material-tailwind/html": "^2.3.0",
+        "sweetalert2": "^11.14.0"
     }
 }
