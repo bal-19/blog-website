@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+const withMT = require("@material-tailwind/html/utils/withMT");
 
-export default {
+export default withMT({
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
@@ -89,4 +90,4 @@ export default {
         "text-indigo-800",
         "text-amber-800",
     ],
-};
+});
