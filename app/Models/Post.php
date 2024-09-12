@@ -27,6 +27,10 @@ class Post extends Model
 
     protected $with = ['author', 'category'];
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     public function author(): BelongsTo
     {
